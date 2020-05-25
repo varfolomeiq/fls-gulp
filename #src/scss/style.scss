@@ -7,9 +7,10 @@
         font-style: #{$style};
     }
 }
+@import "mixins";
 @import "fonts";
 @import "vars";
-@import "mixins";
 @import "base";
+// @import "form";
 @import "blocks/header";
 @import "blocks/footer";

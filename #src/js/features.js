@@ -52,6 +52,29 @@ if ($(".gallery").length > 0) {
   });
 }
 
+// baguetteBox  ===============================
+window.addEventListener("load", function () {
+  baguetteBox.run(".gallery");
+});
+//=============================================
+
+// Parallax =======================================
+$(window).resize(function (event) {
+  intro();
+});
+function intro() {
+  var h = $(window).outerHeight();
+  $(".intro").css("min-height", h);
+}
+intro();
+
+$(window).scroll(function (event) {
+  var prlx = 0 - $(this).scrollTop() / 3;
+
+  $(".intro__bg").css("transform", "translate3d(0," + prlx + "px,0)");
+});
+//=============================================
+
 //VALIDATE FORMS
 $("form button[type=submit]").click(function () {
   var er = 0;
